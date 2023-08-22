@@ -1,0 +1,104 @@
+.App {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+img {
+    position: absolute;
+    /* z-index: 1; */
+    object-fit: cover;
+    object-fit: fill;
+}
+.App .two_circles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+.App .two_circles div:first-of-type {
+    height: 150px;
+    width: 150px;
+    /* border: 5px solid rebeccapurple; */
+    border-radius: 50%;
+    position: absolute;
+    --widthB: calc(100% / 2);
+    --widthC: calc(var(--widthB) - 35px);
+    left: var(--widthC);
+    z-index: 2;
+    -webkit-animation: flash 5s infinite ease-in-out;
+    -moz-animation: flash 5s infinite ease-in-out;
+    -o-animation: flash 5s infinite ease-in-out;
+    animation: flash 5s infinite ease-in-out;
+}
+.App .two_circles div:first-of-type span {
+    color: firebrick;
+    font-size: 28px;
+    font-weight: bolder;
+    position: absolute;
+    left: -70px;
+    --widthB: calc(50% - 20px);
+    bottom: var(--widthB);
+    font-family: 'Pacifico', cursive;
+}
+.App .two_circles span.heart {
+    font-size: 30px;
+    font-weight: bold;
+    -webkit-animation: pulse 1s infinite forwards;
+    -moz-animation: pulse 1s infinite forwards;
+    -o-animation: pulse 1s infinite forwards;
+    animation: pulse 1s infinite forwards;
+    z-index: 5;
+}
+.App .two_circles div:last-of-type {
+    height: 150px;
+    width: 150px;
+    /* border: 5px solid rebeccapurple; */
+    border-radius: 50%;
+    position: absolute;
+    --widthB: calc(100% / 2);
+    --widthC: calc(var(--widthB) - 35px);
+    right: var(--widthC);
+    z-index: 2;
+    -webkit-animation: flash 5s infinite ease-in-out;
+    -moz-animation: flash 5s infinite ease-in-out;
+    -o-animation: flash 5s infinite ease-in-out;
+    animation: flash 5s infinite ease-in-out;
+}
+.App .two_circles div:last-of-type span {
+    color: firebrick;
+    font-size: 28px;
+    font-weight: bolder;
+    position: absolute;
+    right: -70px;
+    --widthB: calc(50% - 20px);
+    bottom: var(--widthB);
+    font-family: 'Pacifico', cursive;
+}
+.App .message {
+    color: firebrick;
+    font-family: 'Pacifico', cursive;
+    font-size: 42px;
+    position: absolute;
+    --leftA: calc(100% / 2);
+    --leftB: calc(var(--leftA) - 202px);
+    left: var(--leftB);
+    --bottomA: calc(100% / 2);
+    --bottomB: calc(var(--bottomA) + 70px);
+    bottom: var(--bottomB);
+    z-index: 5;
+    -webkit-animation: zoomIn 5s infinite ease-in-out;
+    -moz-animation: zoomIn 5s infinite ease-in-out;
+    -o-animation: zoomIn 5s infinite ease-in-out;
+    animation: zoomIn 5s infinite ease-in-out;
+}
+
+canvas {
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.2);
+}
